@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ChooshopFront</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/chooshop-front.css">
+  </head>
+  <body>
+    <script>
+      window.ChooshopFrontENV = {{ENV}};
+      window.EmberENV = window.ChooshopFrontENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/chooshop-front.js"></script>
+    <script>
+      window.ChooshopFront = require('chooshop-front/app')['default'].create(ChooshopFrontENV.APP);
+    </script>
+  </body>
+</html>
