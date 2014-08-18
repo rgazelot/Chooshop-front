@@ -2,7 +2,9 @@
     {{#each itemController="product"}}
         <li>
             {{name}}
-            <button {{action "bought"}}>bought</button>
+            {{#unless isBought}}
+                <button {{action "bought"}}>bought</button>
+            {{/unless}}
         </li>
     {{/each}}
 </ul>
